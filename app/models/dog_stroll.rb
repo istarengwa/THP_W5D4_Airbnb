@@ -1,0 +1,2 @@
+class DogStroll < ApplicationRecord
+end

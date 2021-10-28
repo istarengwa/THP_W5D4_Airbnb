@@ -1,24 +1,23 @@
-# README
+# Petits sites de BDD relationnelles
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Le Airbnb des promenades de chiens
 
-Things you may want to cover:
+En cours de "Bizness Growth Money Maker", on t'avait demandé de créer une entreprise à fort potentiel. À l'époque tu t'étais dit que ce serait une chouette idée de faire une plateforme où des personnes pourraient promener les chiens des autres, en échange de cash-money.
 
-* Ruby version
+C'est dingue comme idée : ça va mettre tous les VC aux abois. Allez, on le fait !
 
-* System dependencies
+* Rails version 5.2.6
 
-* Configuration
+# Installation
 
-* Database creation
+* bundle install
+* rails db:seed
+* rails console
 
-* Database initialization
+# Exemple de test
 
-* How to run the test suite
+'''ruby 
+tp Dogsitter.all'''
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+'''ruby
+tp Dog_Stroll.all'''

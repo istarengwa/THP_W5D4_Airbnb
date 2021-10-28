@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_28_090321) do
+ActiveRecord::Schema.define(version: 2021_10_28_093308) do
 
   create_table "cities", force: :cascade do |t|
     t.string "city_name"
@@ -18,14 +18,21 @@ ActiveRecord::Schema.define(version: 2021_10_28_090321) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "dog_strolls", force: :cascade do |t|
+    t.integer "stroll_id"
+    t.integer "dog_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dog_id"], name: "index_dog_strolls_on_dog_id"
+    t.index ["stroll_id"], name: "index_dog_strolls_on_stroll_id"
+  end
+
   create_table "dogs", force: :cascade do |t|
     t.string "name"
-    t.integer "stroll_id"
     t.integer "city_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_dogs_on_city_id"
-    t.index ["stroll_id"], name: "index_dogs_on_stroll_id"
   end
 
   create_table "dogsitters", force: :cascade do |t|
@@ -39,10 +46,10 @@ ActiveRecord::Schema.define(version: 2021_10_28_090321) do
 
   create_table "strolls", force: :cascade do |t|
     t.datetime "date"
-    t.integer "dogsitters_id"
+    t.integer "dogsitter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["dogsitters_id"], name: "index_strolls_on_dogsitters_id"
+    t.index ["dogsitter_id"], name: "index_strolls_on_dogsitter_id"
   end
 
 end
