@@ -21,5 +21,5 @@ C'est dingue comme idée : ça va mettre tous les VC aux abois. Allez, on le fai
 ```
 
 ```ruby
-    tp Dog_Stroll.all
+    tp DogStroll.all
 ```
