@@ -16,8 +16,10 @@ C'est dingue comme idée : ça va mettre tous les VC aux abois. Allez, on le fai
 
 # Exemple de test
 
-'''ruby 
-tp Dogsitter.all'''
+```ruby
+    tp Dogsitter.all
+```
 
-'''ruby
-tp Dog_Stroll.all'''
+```ruby
+    tp Dog_Stroll.all
+```
